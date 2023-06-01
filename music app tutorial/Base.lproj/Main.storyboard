@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="music_app_tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rw4-vh-Qtc">
+                                <rect key="frame" x="168.66666666666666" y="408.66666666666669" width="56" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play"/>
+                                <connections>
+                                    <action selector="onClickPlaySong:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cnc-W3-3Y3"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gvb-EG-YAH">
+                                <rect key="frame" x="28" y="338.66666666666669" width="337" height="31"/>
+                                <connections>
+                                    <action selector="onSeekBarChangeListener:" destination="BYZ-38-t0r" eventType="valueChanged" id="3ht-LS-8T2"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gvb-EG-YAH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0mZ-Eb-ISF"/>
+                            <constraint firstItem="rw4-vh-Qtc" firstAttribute="top" secondItem="gvb-EG-YAH" secondAttribute="bottom" constant="40" id="8WE-K9-bUA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gvb-EG-YAH" secondAttribute="trailing" constant="30" id="I9a-qs-gc3"/>
+                            <constraint firstItem="gvb-EG-YAH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tcv-G7-2uL"/>
+                            <constraint firstItem="rw4-vh-Qtc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VlG-7a-MfR"/>
+                            <constraint firstItem="rw4-vh-Qtc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pvf-nb-3bl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPlaySong" destination="rw4-vh-Qtc" id="e9H-lF-67z"/>
+                        <outlet property="seekBar" destination="gvb-EG-YAH" id="nNy-OY-Bmo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-37" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
